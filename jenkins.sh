@@ -14,3 +14,4 @@ echo '/var/tmp_disk /tmp none bind 0 0' | sudo tee -a /etc/fstab
 sudo systemctl mask tmp.mount
 df -h /tmp
 sudo systemctl restart jenkins
+#8 - 10 can use if we use t3 micro in EC2 INSTANCE
