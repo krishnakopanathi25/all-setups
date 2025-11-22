@@ -1,9 +1,8 @@
-yum install java-17-amazon-corretto -y
-cd /app
-wget https://download.sonatype.com/nexus/3/nexus-3.86.2-01-linux-x86_64.tar.gz
-tar -zxvf nexus-3.86.2-01-linux-x86_64.tar.gz
+#!/bin/bash
+mkdir -p /opt && cd /opt
+yum install -y java-17-amazon-corretto wget
+wget https://download.sonatype.com/nexus/3/nexus-3.86.2-01-linux-x86_64.tar.gz
+tar -zxvf nexus-3.86.2-01-linux-x86_64.tar.gz
 useradd nexus
-chown -R nexus:nexus nexus-3.86.2-01-linux sonatype-work
-su - nexus
-cd /app/nexus-3.86.2-01-linux/bin/
-./nexus start
+chown -R nexus:nexus nexus-3.86.2-01 sonatype-work
+sudo -u nexus /opt/nexus-3.86.2-01/bin/nexus start
