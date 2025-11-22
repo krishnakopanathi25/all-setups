@@ -1,5 +1,4 @@
 yum install java-17-amazon-corretto -y
-
 cd /app
 wget https://download.sonatype.com/nexus/3/nexus-3.86.2-01-linux-x86_64.tar.gz
 tar -zxvf nexus-3.86.2-01-linux-x86_64.tar.gz
